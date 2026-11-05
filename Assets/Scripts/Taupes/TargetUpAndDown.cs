@@ -1,5 +1,6 @@
 using System;
 using Unity.Mathematics;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class TargetUpAndDown : MonoBehaviour
@@ -13,6 +14,7 @@ public class TargetUpAndDown : MonoBehaviour
     private float duree;
     [SerializeField] private float timerMax;
     private bool isReady;
+    [SerializeField] private Collider taupeColider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,6 +33,7 @@ public class TargetUpAndDown : MonoBehaviour
             timer = -1;
             tempsEcoule = 0;
             gameObject.transform.position = downPosition;
+            taupeColider.enabled = false;
         }
     }
     
@@ -45,6 +48,7 @@ public class TargetUpAndDown : MonoBehaviour
             if (isUp == true)
             {
                 gameObject.transform.position = Vector3.Lerp(upPosition, downPosition, duree);
+                taupeColider.enabled = false;
             }
             else
             {
@@ -66,6 +70,7 @@ public class TargetUpAndDown : MonoBehaviour
                 else
                 {
                     gameObject.transform.position = Vector3.Lerp(downPosition, upPosition, duree);
+                    taupeColider.enabled = true;
                 }  
             }
             if (duree > 1)
