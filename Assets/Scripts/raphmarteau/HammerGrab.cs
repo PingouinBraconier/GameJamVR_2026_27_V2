@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HammerGrab : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class HammerGrab : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Keyboard.current != null && Keyboard.current.gKey.wasPressedThisFrame)
         {
             if (!hasHammer)
             {

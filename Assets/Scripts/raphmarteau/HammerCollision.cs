@@ -24,7 +24,7 @@ public class HammerCollision : MonoBehaviour
             return;
         }
 
-        if (other.CompareTag("TableArcade"))// son table
+        if (other.CompareTag("ArcadeTable"))// son table
         {
             Debug.Log("Table touchée !");
 
