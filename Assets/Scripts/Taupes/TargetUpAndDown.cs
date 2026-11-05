@@ -12,7 +12,7 @@ public class TargetUpAndDown : MonoBehaviour
     private float dureeMax = 0.25f;
     private float tempsEcoule;
     private float duree;
-    [SerializeField] private float timerMax;
+    [SerializeField] public float timerMax;
     private bool isReady;
     [SerializeField] private Collider taupeColider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

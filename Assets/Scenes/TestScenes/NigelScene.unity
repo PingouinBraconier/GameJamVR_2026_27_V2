@@ -412,6 +412,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+--- !u!136 &220227777 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 446163771511182043, guid: 5833da41695ca9746a68e8c3c0e1d3f0, type: 3}
+  m_PrefabInstance: {fileID: 7009895953458861872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &637463318
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +695,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TaupeTarget
       objectReference: {fileID: 0}
+    - target: {fileID: 3401824639277606062, guid: 5833da41695ca9746a68e8c3c0e1d3f0, type: 3}
+      propertyPath: timerMax
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401824639277606062, guid: 5833da41695ca9746a68e8c3c0e1d3f0, type: 3}
+      propertyPath: taupeColider
+      value: 
+      objectReference: {fileID: 220227777}
     - target: {fileID: 8500436902467461962, guid: 5833da41695ca9746a68e8c3c0e1d3f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.21439
