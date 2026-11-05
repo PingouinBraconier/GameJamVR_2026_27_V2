@@ -17,13 +17,11 @@ public class LEDSequence : MonoBehaviour
     void Start()
     {
         currentEffect = StartCoroutine(PlaySequence());
-        StartCoroutine(TestVictory());
+     
     }
 
-    IEnumerator TestVictory()
+    public void Victory()
     {
-        yield return new WaitForSeconds(60f);
-
         PlayVictory();
     }
 

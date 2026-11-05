@@ -4,9 +4,10 @@ using TMPro;
 public class GameTimer : MonoBehaviour
 {
     [SerializeField] private TMP_Text timerText;
-
+    [SerializeField] private LEDSequence[] ledManager;
     private float timeRemaining = 60f;// durée
     private bool gameOver = false;
+    
 
     public bool IsGameOver
     {
@@ -37,6 +38,10 @@ public class GameTimer : MonoBehaviour
 
             // stop taupes
             TargetUpAndDown[] targets = FindObjectsByType<TargetUpAndDown>(FindObjectsSortMode.None);
+
+            ledManager[0].Victory();
+            ledManager[1].Victory();
+
 
             foreach (TargetUpAndDown target in targets)
             {

@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+  multyplicator: 1
 --- !u!136 &68576377 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 6292848072895439456, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
@@ -1884,6 +1885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+  multyplicator: 1
 --- !u!4 &731545650
 Transform:
   m_ObjectHideFlags: 0
@@ -2149,6 +2151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+  multyplicator: 1
 --- !u!1 &1131655231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,6 +2307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+  multyplicator: 1
 --- !u!1 &1256980248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
@@ -2326,6 +2330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+  multyplicator: 1
 --- !u!23 &1366077277 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4241075357160564416, guid: 317a1391117e47440ba340117429c8c4, type: 3}
@@ -2823,6 +2828,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
   timerText: {fileID: 1814474985}
+  ledManager:
+  - {fileID: 1024797810}
+  - {fileID: 693511468}
 --- !u!4 &1582428019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917674758240283209, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
@@ -3520,6 +3528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+  multyplicator: 1
 --- !u!1 &1898310535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
@@ -3909,6 +3918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23aa0689c2f13f84ea0e2d497a7ba9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreUI
+  scoreManager: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!1001 &8161409465340177631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3995,6 +4006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+  multyplicator: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
