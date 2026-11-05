@@ -1,27 +1,33 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class HammerCollision : MonoBehaviour
 {
-    private AudioSource audioSource;
-
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-    private void OnTriggerEnter(Collider other)//interac entrante
+    [Header("Sons")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip taupeHitSound;
+    [SerializeField] private AudioClip tableHitSound;
+    private void OnTriggerEnter(Collider other)//collision entrante
     {
         if (other.CompareTag("Taupe"))
         {
             Debug.Log("Taupe touchée !");
-            if (audioSource != null)//son se lance si taupe touchèe
+            if (taupeHitSound != null)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(taupeHitSound);
             }
+        }
+
+        if (other.CompareTag("ArcadeTable"))
+        {
+            Debug.Log("Table touchée !");
+
+            if (tableHitSound != null)
+                audioSource.PlayOneShot(tableHitSound);
         }
     }
 
-    private void OnTriggerExit(Collider other)//interac sortante
+    private void OnTriggerExit(Collider other)//collision sortante
     {
         if (other.CompareTag("Taupe"))
         {
