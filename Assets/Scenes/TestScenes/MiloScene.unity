@@ -124,6 +124,11 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4241075357160564416, guid: 317a1391117e47440ba340117429c8c4, type: 3}
   m_PrefabInstance: {fileID: 1793331641}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &95657912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 1867969742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &116593114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255,6 +260,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5942883595823201743, guid: 317a1391117e47440ba340117429c8c4, type: 3}
   m_PrefabInstance: {fileID: 145023604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &191558312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 1224145399}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &201730201
 PrefabInstance:
@@ -967,6 +977,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1131655232}
     m_Modifications:
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: taupeColider
+      value: 
+      objectReference: {fileID: 1125576355}
     - target: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
       propertyPath: m_LocalScale.x
       value: 14.116659
@@ -1022,7 +1036,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1125576356}
   m_SourcePrefab: {fileID: 100100000, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
 --- !u!4 &376080618 stripped
 Transform:
@@ -1267,6 +1284,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1131655232}
     m_Modifications:
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: taupeColider
+      value: 
+      objectReference: {fileID: 1256980252}
     - target: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.81489
@@ -1314,7 +1335,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1256980253}
   m_SourcePrefab: {fileID: 100100000, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
 --- !u!4 &649654108 stripped
 Transform:
@@ -1721,6 +1745,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5942883595823201743, guid: 317a1391117e47440ba340117429c8c4, type: 3}
   m_PrefabInstance: {fileID: 1055789319}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1116310470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 1981428660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1125576351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 376080617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1125576355 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6292848072895439456, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 376080617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1125576356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125576351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
 --- !u!1 &1131655231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1845,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1131655232}
     m_Modifications:
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: taupeColider
+      value: 
+      objectReference: {fileID: 1224145404}
     - target: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
       propertyPath: m_LocalScale.y
       value: 14.116661
@@ -1845,13 +1900,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1224145405}
   m_SourcePrefab: {fileID: 100100000, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
 --- !u!4 &1224145400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
   m_PrefabInstance: {fileID: 1224145399}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1224145404 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6292848072895439456, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 1224145399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1224145405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191558312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+--- !u!1 &1256980248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 649654107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1256980252 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6292848072895439456, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 649654107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1256980253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256980248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
 --- !u!23 &1366077277 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4241075357160564416, guid: 317a1391117e47440ba340117429c8c4, type: 3}
@@ -2468,6 +2565,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1131655232}
     m_Modifications:
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: taupeColider
+      value: 
+      objectReference: {fileID: 1867969747}
     - target: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
       propertyPath: m_LocalScale.x
       value: 14.116659
@@ -2523,12 +2624,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1867969748}
   m_SourcePrefab: {fileID: 100100000, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
 --- !u!4 &1867969743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
   m_PrefabInstance: {fileID: 1867969742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1867969747 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6292848072895439456, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 1867969742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1867969748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95657912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+--- !u!1 &1898310535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 8161409465340177631}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1951248366
 PrefabInstance:
@@ -2604,6 +2730,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1131655232}
     m_Modifications:
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: taupeColider
+      value: 
+      objectReference: {fileID: 1981428665}
     - target: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
       propertyPath: m_LocalScale.y
       value: 14.116661
@@ -2655,13 +2785,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1981428666}
   m_SourcePrefab: {fileID: 100100000, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
 --- !u!4 &1981428661 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
   m_PrefabInstance: {fileID: 1981428660}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1981428665 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6292848072895439456, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 1981428660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1981428666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116310470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
 --- !u!1001 &2056362722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2970,6 +3120,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1131655232}
     m_Modifications:
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: taupeColider
+      value: 
+      objectReference: {fileID: 8161409465340177636}
     - target: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.82089
@@ -3017,13 +3171,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2213993178053231961, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8161409465340177637}
   m_SourcePrefab: {fileID: 100100000, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
 --- !u!4 &8161409465340177632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
   m_PrefabInstance: {fileID: 8161409465340177631}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &8161409465340177636 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6292848072895439456, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+  m_PrefabInstance: {fileID: 8161409465340177631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8161409465340177637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898310535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

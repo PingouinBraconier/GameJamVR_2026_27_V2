@@ -18,8 +18,8 @@ public class TargetUpAndDown : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        upPosition = gameObject.transform.position;
-        downPosition = upPosition - new Vector3(0, 1, 0);
+        downPosition = gameObject.transform.position;
+        upPosition = downPosition + new Vector3(0f, 0.2f, 0f);
         isUp = false;
         gameObject.transform.position = downPosition;
     }

@@ -66,10 +66,58 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: edaa5e527bf1ff144a918b1a44e863bc, type: 2}
     - target: {fileID: 919132149155446097, guid: 76f8a568e43290a45bb1b1879cbe327c, type: 3}
       propertyPath: m_Name
-      value: Mole (2)
+      value: Mole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 76f8a568e43290a45bb1b1879cbe327c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 308829844500938008}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 76f8a568e43290a45bb1b1879cbe327c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6292848072895439456}
   m_SourcePrefab: {fileID: 100100000, guid: 76f8a568e43290a45bb1b1879cbe327c, type: 3}
+--- !u!1 &2213993178053231961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 76f8a568e43290a45bb1b1879cbe327c, type: 3}
+  m_PrefabInstance: {fileID: 1331032223545915400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &308829844500938008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213993178053231961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc864d0b85fbd704b814599b1fd6d067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetUpAndDown
+  timerMax: 1
+  taupeColider: {fileID: 0}
+--- !u!136 &6292848072895439456
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213993178053231961}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.01276709
+  m_Height: 0.019709412
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.00014529095, z: -0.018674312}
