@@ -279,8 +279,8 @@ Transform:
   m_GameObject: {fileID: 225020518}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.25, y: 0.386, z: 0.129}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 3.3884, y: 0.277, z: -0.347}
+  m_LocalScale: {x: 0.2231, y: 0.25695, z: 0.22145}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetUpAndDown
   timerMax: 1
+  taupeColider: {fileID: 225020519}
 --- !u!65 &421334953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -319,6 +320,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0349255, y: 0.00010948539, z: 0.034925498}
   m_Center: {x: 0, y: -0.000052995976, z: 9.313226e-10}
+--- !u!1 &564981908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 564981910}
+  - component: {fileID: 564981909}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &564981909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564981908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdec9fbd2fd42d44943a52526d22e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreMultiple
+--- !u!4 &564981910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564981908}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6617, y: 1.38822, z: -1.70869}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &652124635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -551,6 +596,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6e6a5792816f06e418069c96c54cbc92, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: daee83706eb344c4eae30146c21b9ce0, type: 2}
     - target: {fileID: 919132149155446097, guid: 6e6a5792816f06e418069c96c54cbc92, type: 3}
       propertyPath: m_Name
       value: HammerSol
@@ -692,6 +741,7 @@ MonoBehaviour:
   audioSource: {fileID: 993038666}
   taupeHitSound: {fileID: 8300000, guid: 8df8c3078af4ca94bbd45136dd7f0783, type: 3}
   tableHitSound: {fileID: 8300000, guid: bf70b160f3c666f4e96230b4222f2841, type: 3}
+  scoreManager: {fileID: 0}
 --- !u!65 &993038668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1125,6 +1175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6e6a5792816f06e418069c96c54cbc92, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: daee83706eb344c4eae30146c21b9ce0, type: 2}
     - target: {fileID: 919132149155446097, guid: 6e6a5792816f06e418069c96c54cbc92, type: 3}
       propertyPath: m_Name
       value: Hammer
@@ -1296,6 +1350,7 @@ MonoBehaviour:
   audioSource: {fileID: 1712353311}
   taupeHitSound: {fileID: 8300000, guid: 8df8c3078af4ca94bbd45136dd7f0783, type: 3}
   tableHitSound: {fileID: 8300000, guid: bf70b160f3c666f4e96230b4222f2841, type: 3}
+  scoreManager: {fileID: 564981909}
 --- !u!54 &1712353315
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1667,6 +1722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetUpAndDown
   timerMax: 1
+  taupeColider: {fileID: 2062299261}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1680,3 +1736,4 @@ SceneRoots:
   - {fileID: 2062299264}
   - {fileID: 225020522}
   - {fileID: 72281260}
+  - {fileID: 564981910}

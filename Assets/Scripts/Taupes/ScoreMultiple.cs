@@ -8,6 +8,13 @@ public class ScoreMultiple : MonoBehaviour
     private bool isGold;
     private bool isRed;
 
+    public float Score
+    {
+        get
+        {
+            return score;
+        }
+    }
     public void AddScore()
     {
         if (isGold == true)
@@ -24,6 +31,9 @@ public class ScoreMultiple : MonoBehaviour
         }
         score = score + points * multyplicator;
         multyplicator = multyplicator + 1;
+
+        Debug.Log("Score actuel : " + score);
+        Debug.Log("Multiplicateur actuel : " + multyplicator);
     }
 
     public void ResetMultyplicator()

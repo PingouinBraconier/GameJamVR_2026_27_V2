@@ -7,6 +7,9 @@ public class HammerCollision : MonoBehaviour
     [SerializeField] private AudioClip taupeHitSound;
     [SerializeField] private AudioClip tableHitSound;
 
+    [Header("Score")]
+    [SerializeField] private ScoreMultiple scoreManager;
+
     private void OnTriggerEnter(Collider other)//collision entrante 
     {
         TargetUpAndDown target = other.GetComponentInParent<TargetUpAndDown>();
@@ -14,6 +17,11 @@ public class HammerCollision : MonoBehaviour
         if (target != null)
         {
             Debug.Log("Taupe touchée !");
+
+            if (scoreManager != null)
+            {
+                scoreManager.AddScore();
+            }
 
             if (audioSource != null && taupeHitSound != null)
             {
