@@ -24,11 +24,14 @@ public class TargetUpAndDown : MonoBehaviour
 
     public void DownOnHit()
     {
-        isReady = false;
-        isUp = !isUp;
-        timer = -1;
-        tempsEcoule = 0;
-        gameObject.transform.position = downPosition;
+        if (isUp == true)
+        {
+            isReady = false;
+            isUp = false;
+            timer = -1;
+            tempsEcoule = 0;
+            gameObject.transform.position = downPosition;
+        }
     }
     
     // Update is called once per frame
