@@ -21,6 +21,15 @@ public class TargetUpAndDown : MonoBehaviour
         isUp = false;
         gameObject.transform.position = downPosition;
     }
+
+    public void DownOnHit()
+    {
+        isReady = false;
+        isUp = !isUp;
+        timer = -1;
+        tempsEcoule = 0;
+        gameObject.transform.position = downPosition;
+    }
     
     // Update is called once per frame
     void FixedUpdate()
