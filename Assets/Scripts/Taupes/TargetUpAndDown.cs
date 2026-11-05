@@ -15,6 +15,8 @@ public class TargetUpAndDown : MonoBehaviour
     [SerializeField] public float timerMax;
     private bool isReady;
     [SerializeField] private Collider taupeColider;
+
+    [SerializeField] private ScoreMultiple scoreManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -49,6 +51,7 @@ public class TargetUpAndDown : MonoBehaviour
             {
                 gameObject.transform.position = Vector3.Lerp(upPosition, downPosition, duree);
                 taupeColider.enabled = false;
+                scoreManager.ResetMultyplicator();
             }
             else
             {
@@ -80,6 +83,9 @@ public class TargetUpAndDown : MonoBehaviour
                 timer = 0;
                 tempsEcoule = 0;
                 
+                Debug.Log("scoreReset");
+
+
             }
         }
         

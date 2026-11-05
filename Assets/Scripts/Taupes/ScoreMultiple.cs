@@ -3,7 +3,7 @@ using UnityEngine;
 public class ScoreMultiple : MonoBehaviour
 {
     private float score;
-    private float multyplicator = 1;
+    public float multyplicator = 1;
     private float points = 1;
     private bool isGold;
     private bool isRed;
