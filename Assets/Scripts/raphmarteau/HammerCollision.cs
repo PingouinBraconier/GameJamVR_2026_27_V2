@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class HammerCollision : MonoBehaviour
 {
@@ -7,31 +6,33 @@ public class HammerCollision : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip taupeHitSound;
     [SerializeField] private AudioClip tableHitSound;
-    private void OnTriggerEnter(Collider other)//collision entrante
+
+    private void OnTriggerEnter(Collider other)//collision entrante 
     {
-        if (other.CompareTag("Taupe"))
+        TargetUpAndDown target = other.GetComponentInParent<TargetUpAndDown>();
+
+        if (target != null)
         {
             Debug.Log("Taupe touchée !");
-            if (taupeHitSound != null)
+
+            if (audioSource != null && taupeHitSound != null)
             {
                 audioSource.PlayOneShot(taupeHitSound);
             }
+            target.DownOnHit();
+
+            return;
         }
 
-        if (other.CompareTag("ArcadeTable"))
+        if (other.CompareTag("TableArcade"))// son table
         {
             Debug.Log("Table touchée !");
 
-            if (tableHitSound != null)
+            if (audioSource != null && tableHitSound != null)
+            {
                 audioSource.PlayOneShot(tableHitSound);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)//collision sortante
-    {
-        if (other.CompareTag("Taupe"))
-        {
-            Debug.Log("Marteau éloigné de la taupe !");
+            }
         }
     }
 }
+
