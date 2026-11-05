@@ -7,6 +7,7 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private LEDSequence[] ledManager;
     private float timeRemaining = 60f;// durée
     private bool gameOver = false;
+    public bool isGamStart;
     
 
     public bool IsGameOver
@@ -24,34 +25,37 @@ public class GameTimer : MonoBehaviour
 
     void Update()
     {
-        if (gameOver)
+        if(isGamStart == true)
         {
-            return;
-        }
-
-        timeRemaining -= Time.deltaTime;//temps qui reste et temps écoulé
-
-        if (timeRemaining <= 0)
-        {
-            timeRemaining = 0;
-            gameOver = true;
-
-            // stop taupes
-            TargetUpAndDown[] targets = FindObjectsByType<TargetUpAndDown>(FindObjectsSortMode.None);
-
-            ledManager[0].Victory();
-            ledManager[1].Victory();
-
-
-            foreach (TargetUpAndDown target in targets)
+            if (gameOver)
             {
-                target.enabled = false;
+                return;
             }
 
-            Debug.Log("Fin de la partie !");
-        }
+            timeRemaining -= Time.deltaTime;//temps qui reste et temps écoulé
 
-        UpdateTimerDisplay();
+            if (timeRemaining <= 0)
+            {
+                timeRemaining = 0;
+                gameOver = true;
+
+                // stop taupes
+                TargetUpAndDown[] targets = FindObjectsByType<TargetUpAndDown>(FindObjectsSortMode.None);
+
+                ledManager[0].Victory();
+                ledManager[1].Victory();
+
+
+                foreach (TargetUpAndDown target in targets)
+                {
+                    target.enabled = false;
+                }
+
+                Debug.Log("Fin de la partie !");
+            }
+
+            UpdateTimerDisplay();
+        }
     }
 
     private void UpdateTimerDisplay()

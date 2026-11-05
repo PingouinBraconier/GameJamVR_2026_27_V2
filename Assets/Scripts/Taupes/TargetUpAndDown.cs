@@ -24,6 +24,7 @@ public class TargetUpAndDown : MonoBehaviour
         upPosition = downPosition + new Vector3(0f, 0.2f, 0f);
         isUp = false;
         gameObject.transform.position = downPosition;
+        taupeColider.enabled = false;
     }
 
     public void DownOnHit()
