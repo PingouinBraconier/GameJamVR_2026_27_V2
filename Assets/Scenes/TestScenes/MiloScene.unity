@@ -874,6 +874,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df2bb6d96ef27c4bbca2f73666f7115, type: 3}
+      propertyPath: m_TagString
+      value: ArcadeTable
+      objectReference: {fileID: 0}
     - target: {fileID: 964479258376105408, guid: 8df2bb6d96ef27c4bbca2f73666f7115, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
