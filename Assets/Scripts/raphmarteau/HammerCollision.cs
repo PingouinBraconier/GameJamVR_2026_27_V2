@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class HammerCollision : MonoBehaviour
 {
+
+    [SerializeField] private GameTimer gameTimer;
     [Header("Sons")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip taupeHitSound;
@@ -16,6 +18,10 @@ public class HammerCollision : MonoBehaviour
 
         if (target != null)
         {
+            if (gameTimer != null && gameTimer.IsGameOver)
+            {
+                return;
+            }
             Debug.Log("Taupe touchée !");
 
             if (scoreManager != null)
