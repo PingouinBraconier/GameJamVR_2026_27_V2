@@ -30,7 +30,7 @@ public class HammerCollision : MonoBehaviour
     {
         TargetUpAndDown target = other.GetComponentInParent<TargetUpAndDown>();
 
-        if (Vector3.Dot(hammerDirection, new Vector3(0, -1, 1)) < 0.5f)
+        if (Vector3.Dot(hammerDirection, new Vector3(0, -1, 1)) < 0.7f)
         {
             return;
         }
