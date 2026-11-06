@@ -11,6 +11,7 @@ public class GameTimer : MonoBehaviour
 
     [Header("Musique de la partie")]
     [SerializeField] private AudioSource gameMusicSource;
+    [SerializeField] private AudioSource WinMusicSource;
 
     private bool musicStarted = false;
 
@@ -69,7 +70,7 @@ public class GameTimer : MonoBehaviour
 
                 ledManager[0].Victory();
                 ledManager[1].Victory();
-
+                WinMusicSource.Play();
 
                 foreach (TargetUpAndDown target in targets)
                 {
