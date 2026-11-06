@@ -1789,8 +1789,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Jouer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 901c1ef45d32e4780b4f3a32130cc5db, type: 2}
+  m_sharedMaterial: {fileID: 5831852744883566546, guid: 901c1ef45d32e4780b4f3a32130cc5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2057,8 +2057,8 @@ MonoBehaviour:
     - Game Lead/Level Design\n\nNigel DOGLIANI - Game Dev\n\nRapha\xEBlle GRAY -
     Game Dev\n\nWinston LEMIEUX - UI/Sound Design\n\n\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 901c1ef45d32e4780b4f3a32130cc5db, type: 2}
+  m_sharedMaterial: {fileID: 5831852744883566546, guid: 901c1ef45d32e4780b4f3a32130cc5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3256,8 +3256,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Whack a Mole VR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 901c1ef45d32e4780b4f3a32130cc5db, type: 2}
+  m_sharedMaterial: {fileID: 5831852744883566546, guid: 901c1ef45d32e4780b4f3a32130cc5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
