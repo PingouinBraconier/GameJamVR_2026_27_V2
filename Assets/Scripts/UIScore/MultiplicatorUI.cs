@@ -26,7 +26,7 @@ public class MultiplicatorUI : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         tempsEcoule += 0.1f;
         duree = tempsEcoule / dureeMax;
-        gameObject.transform.position = Vector3.Lerp(downPosition, upPosition, duree);
+        multi.transform.position = Vector3.Lerp(downPosition, upPosition, duree);
         if (duree > 1)
         {
             yield return new WaitForSeconds(1f);

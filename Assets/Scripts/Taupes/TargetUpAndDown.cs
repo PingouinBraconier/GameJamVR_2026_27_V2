@@ -15,7 +15,7 @@ public class TargetUpAndDown : MonoBehaviour
     [SerializeField] public float timerMax;
     private bool isReady;
     [SerializeField] private Collider taupeColider;
-
+    [SerializeField] private MultiplicatorUI multiplicatorUI;
     [SerializeField] private ScoreMultiple scoreManager;
     [SerializeField] private LEDSequence[] ledManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,6 +38,7 @@ public class TargetUpAndDown : MonoBehaviour
             tempsEcoule = 0;
             gameObject.transform.position = downPosition;
             taupeColider.enabled = false;
+            multiplicatorUI.upMulti();
         }
     }
     
