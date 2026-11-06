@@ -17,6 +17,7 @@ public class TargetUpAndDown : MonoBehaviour
     [SerializeField] private Collider taupeColider;
 
     [SerializeField] private ScoreMultiple scoreManager;
+    [SerializeField] private LEDSequence[] ledManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,6 +54,8 @@ public class TargetUpAndDown : MonoBehaviour
                 gameObject.transform.position = Vector3.Lerp(upPosition, downPosition, duree);
                 taupeColider.enabled = false;
                 scoreManager.ResetMultyplicator();
+                ledManager[0].PlayFailed();
+                ledManager[1].PlayFailed();
             }
             else
             {

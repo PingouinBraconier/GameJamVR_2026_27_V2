@@ -709,6 +709,14 @@ PrefabInstance:
       propertyPath: taupeColider
       value: 
       objectReference: {fileID: 68576377}
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: 'ledManager.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1024797810}
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: 'ledManager.Array.data[1]'
+      value: 
+      objectReference: {fileID: 693511468}
     - target: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
       propertyPath: m_LocalScale.x
       value: 14.116659
@@ -1273,6 +1281,14 @@ PrefabInstance:
       propertyPath: taupeColider
       value: 
       objectReference: {fileID: 1125576355}
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: 'ledManager.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1024797810}
+    - target: {fileID: 308829844500938008, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
+      propertyPath: 'ledManager.Array.data[1]'
+      value: 
+      objectReference: {fileID: 693511468}
     - target: {fileID: 1581466865324007395, guid: 797be701465a76b4389d57cc91060b7e, type: 3}
       propertyPath: m_LocalScale.x
       value: 14.116659
@@ -2151,6 +2167,7 @@ MonoBehaviour:
   materialOn: {fileID: 2100000, guid: fa9be6fd4a58b934f949bac2c3460975, type: 2}
   materialOff: {fileID: 2100000, guid: b664c0252c27c244db979302af01cbd4, type: 2}
   materialVictory: {fileID: 2100000, guid: e05900c22225bf44989c308c9a43a2d4, type: 2}
+  materialFail: {fileID: 2100000, guid: c83d6fd9b66c9734e931209415936278, type: 2}
   delay: 0.1
   ledSequence: {fileID: 693511468}
 --- !u!4 &693511469
@@ -2486,6 +2503,7 @@ MonoBehaviour:
   materialOn: {fileID: 2100000, guid: fa9be6fd4a58b934f949bac2c3460975, type: 2}
   materialOff: {fileID: 2100000, guid: b664c0252c27c244db979302af01cbd4, type: 2}
   materialVictory: {fileID: 2100000, guid: e05900c22225bf44989c308c9a43a2d4, type: 2}
+  materialFail: {fileID: 2100000, guid: c83d6fd9b66c9734e931209415936278, type: 2}
   delay: 0.1
   ledSequence: {fileID: 1024797810}
 --- !u!4 &1024797811

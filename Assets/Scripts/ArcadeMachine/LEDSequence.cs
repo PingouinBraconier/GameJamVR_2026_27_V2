@@ -102,9 +102,21 @@ public class LEDSequence : MonoBehaviour
         foreach (Renderer led in leds)
         {
             led.material = materialFail;
-            yield return new WaitForSeconds(0.1f);
-            led.sharedMaterial = materialOff;
-            currentEffect = StartCoroutine(PlaySequence());
+            
+            
+           
         }
+        yield return new WaitForSeconds(0.2f);
+
+        foreach (Renderer led in leds)
+        {
+            led.sharedMaterial = materialOff;
+
+
+
+        }
+
+       
+        currentEffect = StartCoroutine(PlaySequence());
     }
 }
