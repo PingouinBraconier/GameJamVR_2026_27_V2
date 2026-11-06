@@ -1,9 +1,14 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class PressingButton : MonoBehaviour
 {
     [SerializeField] private GameTimer gameTimer;
     [SerializeField] private DificultyChange dificultyChange;
+    [SerializeField] private TMP_Text dificultyName;
+    [SerializeField] private Canvas canvasDificulty;
+    private bool isPressable = true;
     private float modeGame = 2;
     private Vector3 upPosition;
     private Vector3 downPosition;
@@ -21,25 +26,37 @@ public class PressingButton : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        gameObject.transform.position = downPosition;
-        if (gameObject.GetComponent<isStart>() == true)
+        if (isPressable == true)
         {
-            StartGame();
-            gameTimer.isGamStart = true;
-            TargetUpAndDown[] targets = FindObjectsByType<TargetUpAndDown>(FindObjectsSortMode.None);
-            foreach (TargetUpAndDown target in targets)
+            gameObject.transform.position = downPosition;
+
+            if (gameObject.GetComponent<isStart>() == true)
             {
-                target.enabled = true;
+                canvasDificulty.enabled = false;
+                StartGame();
+                gameTimer.isGamStart = true;
+                TargetUpAndDown[] targets = FindObjectsByType<TargetUpAndDown>(FindObjectsSortMode.None);
+                foreach (TargetUpAndDown target in targets)
+                {
+                    target.enabled = true;
+                }
             }
-        }
-        else if (gameObject.GetComponent<IsLeft>() == true)
-        {
-            LeftArrow();
-        }
-        else if(gameObject.GetComponent<IsRight>() == true)
-        {
-            RightArrow();
-        }  
+            else if (gameObject.GetComponent<IsLeft>() == true)
+            {
+                LeftArrow();
+            }
+            else if (gameObject.GetComponent<IsRight>() == true)
+            {
+                RightArrow();
+            }
+            StartCoroutine(delay());
+        } 
+    }
+    IEnumerator delay()
+    {
+        isPressable = false;
+        yield return new WaitForSeconds(0.5f);
+        isPressable = true;
     }
     private void OnTriggerExit(Collider other)
     {
@@ -65,21 +82,41 @@ public class PressingButton : MonoBehaviour
         if (modeGame == 3)
         {
             modeGame = 1;
+            dificultyName.text = "Easy";
+            dificultyName.color = Color.green;
         }
-        else
+        else if (modeGame == 2)
         {
-            modeGame = modeGame + 1;
+            modeGame = 3;
+            dificultyName.text = "Hard";
+            dificultyName.color = Color.red;
+        }
+        else if (modeGame == 1)
+        {
+            modeGame = 2;
+            dificultyName.text = "Normal";
+            dificultyName.color = Color.darkBlue;
         }
     }
     public void LeftArrow()
     {
-        if (modeGame == 1)
+        if (modeGame == 3)
+        {
+            modeGame = 2;
+            dificultyName.text = "Normal";
+            dificultyName.color = Color.darkBlue;
+        }
+        else if (modeGame == 2)
+        {
+            modeGame = 1;
+            dificultyName.text = "Easy";
+            dificultyName.color = Color.green;
+        }
+        else if (modeGame == 1)
         {
             modeGame = 3;
-        }
-        else
-        {
-            modeGame = modeGame - 1;
+            dificultyName.text = "Hard";
+            dificultyName.color = Color.red;
         }
     }
 }
