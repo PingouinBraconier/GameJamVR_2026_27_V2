@@ -1,5 +1,4 @@
-using Unity.Mathematics;
-using UnityEditor.Rendering;
+
 using UnityEngine;
 using System.Collections;
 
@@ -12,6 +11,7 @@ public class TargetUpAndDown : MonoBehaviour
     private float dureeMax = 0.25f;
     private float tempsEcoule;
     private float duree;
+    public float mutiplicateurDificulte = 1;
     private bool sonEchecJoue = false;
     private bool sonSortieJoue = false;
     [SerializeField] public float timerMax;
@@ -61,7 +61,7 @@ public class TargetUpAndDown : MonoBehaviour
         if (timer > timerMax)
         {
             tempsEcoule += Time.deltaTime;
-            duree = tempsEcoule / dureeMax;
+            duree = tempsEcoule * mutiplicateurDificulte / dureeMax;
             if (isUp == true)
             {
                 // Son joué une seule fois au début de la descente

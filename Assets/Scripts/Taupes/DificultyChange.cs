@@ -18,29 +18,30 @@ public class DificultyChange : MonoBehaviour
     // Update is called once per frame
     public void EasyMode()
     {
-        taupeParams1.timerMax = 1.5f;
-        taupeParams2.timerMax = 1.5f;
-        taupeParams3.timerMax = 1.5f;
-        taupeParams4.timerMax = 1.5f;
-        taupeParams5.timerMax = 1.5f;
-        taupeParams6.timerMax = 1.5f;
+        taupeParams1.mutiplicateurDificulte = 1f;
+        taupeParams2.mutiplicateurDificulte = 1f;
+        taupeParams3.mutiplicateurDificulte = 1f;
+        taupeParams4.mutiplicateurDificulte = 1f;
+        taupeParams5.mutiplicateurDificulte = 1f;
+        taupeParams6.mutiplicateurDificulte = 1f;
     }
     public void NormalMode()
     {
-        taupeParams1.timerMax = 1f;
-        taupeParams2.timerMax = 1f;
-        taupeParams3.timerMax = 1f;
-        taupeParams4.timerMax = 1f;
-        taupeParams5.timerMax = 1f;
-        taupeParams6.timerMax = 1f;
+        taupeParams1.mutiplicateurDificulte = 1.5f;
+        taupeParams2.mutiplicateurDificulte = 1.5f;
+        taupeParams3.mutiplicateurDificulte = 1.5f;
+        taupeParams4.mutiplicateurDificulte = 1.5f;
+        taupeParams5.mutiplicateurDificulte = 1.5f;
+        taupeParams6.mutiplicateurDificulte = 1.5f;
+
     }
     public void HardMode()
     {
-        taupeParams1.timerMax = 0.25f;
-        taupeParams2.timerMax = 0.25f;
-        taupeParams3.timerMax = 0.25f;
-        taupeParams4.timerMax = 0.25f;
-        taupeParams5.timerMax = 0.25f;
-        taupeParams6.timerMax = 0.25f;
+        taupeParams1.mutiplicateurDificulte = 100f;
+        taupeParams2.mutiplicateurDificulte = 100f;
+        taupeParams3.mutiplicateurDificulte = 100f;
+        taupeParams4.mutiplicateurDificulte = 100f;
+        taupeParams5.mutiplicateurDificulte = 100f;
+        taupeParams6.mutiplicateurDificulte = 100f;
     }
 }
