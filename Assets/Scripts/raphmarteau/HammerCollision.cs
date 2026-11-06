@@ -16,10 +16,24 @@ public class HammerCollision : MonoBehaviour
 
     [Header("Vibrations VR")]
     [SerializeField] private VRVibrations vrVibrations;
+    [SerializeField] private Vector3 hammerDirection;
+    [SerializeField] private Vector3 previousPoint;
+    [SerializeField] private GameObject HammerPoint;
+
+    private void Update()
+    {
+        hammerDirection = (HammerPoint.transform.position - previousPoint).normalized;
+        previousPoint = HammerPoint.transform.position;
+    }
 
     private void OnTriggerEnter(Collider other)//collision entrante 
     {
         TargetUpAndDown target = other.GetComponentInParent<TargetUpAndDown>();
+
+        if (Vector3.Dot(hammerDirection, new Vector3(0, -1, 1)) < 0.5f)
+        {
+            return;
+        }
 
         if (target != null)
         {
