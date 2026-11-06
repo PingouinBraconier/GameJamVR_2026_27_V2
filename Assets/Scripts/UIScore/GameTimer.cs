@@ -8,7 +8,12 @@ public class GameTimer : MonoBehaviour
     private float timeRemaining = 60f;// durée
     private bool gameOver = false;
     public bool isGamStart;
-    
+
+    [Header("Musique de la partie")]
+    [SerializeField] private AudioSource gameMusicSource;
+
+    private bool musicStarted = false;
+
 
     public bool IsGameOver
     {
@@ -25,7 +30,21 @@ public class GameTimer : MonoBehaviour
 
     void Update()
     {
-        if(isGamStart == true)
+
+        // Déclenchement de la musique au début de la partie
+        if (isGamStart && !musicStarted)
+        {
+            if (gameMusicSource != null)
+            {
+                gameMusicSource.loop = true;
+                gameMusicSource.Play();
+            }
+
+            musicStarted = true;
+        }
+
+
+        if (isGamStart == true)
         {
             if (gameOver)
             {
@@ -38,6 +57,12 @@ public class GameTimer : MonoBehaviour
             {
                 timeRemaining = 0;
                 gameOver = true;
+
+                // Arrêt de la musique
+                if (gameMusicSource != null)
+                {
+                    gameMusicSource.Stop();
+                }
 
                 // stop taupes
                 TargetUpAndDown[] targets = FindObjectsByType<TargetUpAndDown>(FindObjectsSortMode.None);
