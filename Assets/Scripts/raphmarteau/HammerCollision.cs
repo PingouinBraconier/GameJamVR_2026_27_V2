@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.Haptics;
 
 public class HammerCollision : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class HammerCollision : MonoBehaviour
 
     [Header("Score")]
     [SerializeField] private ScoreMultiple scoreManager;
+
+    [Header("Vibrations VR")]
+    [SerializeField] private VRVibrations vrVibrations;
 
     private void OnTriggerEnter(Collider other)//collision entrante 
     {
@@ -26,7 +30,16 @@ public class HammerCollision : MonoBehaviour
 
             if (scoreManager != null)
             {
+                // On récupère le multiplicateur avant de calculer le score
+                float currentMultiplier = scoreManager.multyplicator;
+
                 scoreManager.AddScore();
+
+                // On déclenche la vibration
+                if (vrVibrations != null)
+                {
+                    vrVibrations.Vibrate(currentMultiplier);
+                }
             }
 
             if (audioSource != null && taupeHitSound != null)
