@@ -1,4 +1,3 @@
-using System;
 using Unity.Mathematics;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -12,12 +11,22 @@ public class TargetUpAndDown : MonoBehaviour
     private float dureeMax = 0.25f;
     private float tempsEcoule;
     private float duree;
+    private bool sonEchecJoue = false;
+    private bool sonSortieJoue = false;
     [SerializeField] public float timerMax;
     private bool isReady;
     [SerializeField] private Collider taupeColider;
     [SerializeField] private MultiplicatorUI multiplicatorUI;
     [SerializeField] private ScoreMultiple scoreManager;
     [SerializeField] private LEDSequence[] ledManager;
+
+    [Header("Sons de la taupe")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip sonSortie;
+
+    [SerializeField] private AudioClip sonsEchec;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,6 +48,8 @@ public class TargetUpAndDown : MonoBehaviour
             gameObject.transform.position = downPosition;
             taupeColider.enabled = false;
             multiplicatorUI.upMulti();
+            sonSortieJoue = false;
+            sonEchecJoue = false;
         }
     }
     
@@ -52,12 +63,25 @@ public class TargetUpAndDown : MonoBehaviour
             duree = tempsEcoule / dureeMax;
             if (isUp == true)
             {
+                // Son joué une seule fois au début de la descente
+                if (!sonEchecJoue)
+                {
+                    if (audioSource != null && sonsEchec != null)
+                    {
+                        audioSource.PlayOneShot(sonsEchec);
+                    }
+
+                    sonEchecJoue = true;
+                }
+
                 gameObject.transform.position = Vector3.Lerp(upPosition, downPosition, duree);
                 taupeColider.enabled = false;
+
                 scoreManager.ResetMultyplicator();
                 ledManager[0].PlayFailed();
                 ledManager[1].PlayFailed();
             }
+
             else
             {
                 if (isReady == false)
@@ -77,20 +101,37 @@ public class TargetUpAndDown : MonoBehaviour
                 }
                 else
                 {
+                    // Début de la montée
+                    if (!sonSortieJoue)
+                    {
+                        if (audioSource != null && sonSortie != null)
+                        {
+                            audioSource.PlayOneShot(sonSortie);
+                        }
+
+                        sonSortieJoue = true;
+                    }
+
                     gameObject.transform.position = Vector3.Lerp(downPosition, upPosition, duree);
                     taupeColider.enabled = true;
-                }  
+                }
             }
             if (duree > 1)
             {
                 isReady = false;
+
+                // Si la taupe vient de terminer sa descente
+                if (isUp == true)
+                {
+                    sonSortieJoue = false;
+                    sonEchecJoue = false;
+                }
+
                 isUp = !isUp;
                 timer = 0;
                 tempsEcoule = 0;
-                
+
                 Debug.Log("scoreReset");
-
-
             }
         }
         
