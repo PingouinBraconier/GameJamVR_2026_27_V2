@@ -1,5 +1,7 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
 
 public class HammerGrab : MonoBehaviour
 {
@@ -8,36 +10,35 @@ public class HammerGrab : MonoBehaviour
 
     private bool hasHammer = false;
 
-    void Start()//marteau par terre visible celui dans la main = invisible 
+    void Start()
     {
         hammerSol.SetActive(true);
         hammerMain.SetActive(false);
+
+        Debug.Log("Marteau disponible au sol");
     }
 
-    void Update()
+    public void Grab()
     {
-        if (Keyboard.current != null && Keyboard.current.gKey.wasPressedThisFrame)
+
+
+        if (!hasHammer)
         {
-            if (!hasHammer)
-            {
-                // on prend le marteau
-                hammerSol.SetActive(false);
-                hammerMain.SetActive(true);
+            hammerSol.SetActive(false);
+            hammerMain.SetActive(true);
 
-                hasHammer = true;
+            hasHammer = true;
 
-                Debug.Log("Marteau récup !");
-            }
-            else
-            {
-                // on repose le marteau 
-                hammerMain.SetActive(false);
-                hammerSol.SetActive(true);
+            Debug.Log("Marteau récupéré !");
+        }
+        else
+        {
+            hammerMain.SetActive(false);
+            hammerSol.SetActive(true);
 
-                hasHammer = false;
+            hasHammer = false;
 
-                Debug.Log("Marteau reposé !");
-            }
+            Debug.Log("Marteau reposé !");
         }
     }
 }
