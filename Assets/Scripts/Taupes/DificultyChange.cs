@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class DificultyChange : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class DificultyChange : MonoBehaviour
     [SerializeField] private TargetUpAndDown taupeParams4;
     [SerializeField] private TargetUpAndDown taupeParams5;
     [SerializeField] private TargetUpAndDown taupeParams6;
+    [SerializeField] private TextMeshPro dificultyName;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +25,8 @@ public class DificultyChange : MonoBehaviour
         taupeParams4.timerMax = 1.5f;
         taupeParams5.timerMax = 1.5f;
         taupeParams6.timerMax = 1.5f;
+        dificultyName.text = "Easy";
+        dificultyName.color = Color.green;
     }
     public void NormalMode()
     {
@@ -32,6 +36,8 @@ public class DificultyChange : MonoBehaviour
         taupeParams4.timerMax = 1f;
         taupeParams5.timerMax = 1f;
         taupeParams6.timerMax = 1f;
+        dificultyName.text = "Normal";
+        dificultyName.color = Color.darkBlue;
     }
     public void HardMode()
     {
@@ -41,5 +47,7 @@ public class DificultyChange : MonoBehaviour
         taupeParams4.timerMax = 0.25f;
         taupeParams5.timerMax = 0.25f;
         taupeParams6.timerMax = 0.25f;
+        dificultyName.text = "Hard";
+        dificultyName.color = Color.red;
     }
 }
