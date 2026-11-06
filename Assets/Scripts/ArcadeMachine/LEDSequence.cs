@@ -8,6 +8,7 @@ public class LEDSequence : MonoBehaviour
     public Material materialOn;
     public Material materialOff;
     public Material materialVictory;
+    [SerializeField] private Material materialFail;
     public float delay = 0.2f;
     private Coroutine currentEffect;
     public LEDSequence ledSequence;
@@ -64,6 +65,12 @@ public class LEDSequence : MonoBehaviour
         currentEffect = StartCoroutine(VictoryEffect());
     }
 
+    public void PlayFailed()
+    {
+        StopCurrentEffect();
+        currentEffect = StartCoroutine(FailEffect());
+    }
+
     IEnumerator VictoryEffect()
     {
         foreach(Renderer led in leds)
@@ -87,6 +94,17 @@ public class LEDSequence : MonoBehaviour
             }
 
             yield return new WaitForSeconds(0.2f);
+        }
+    }
+
+    IEnumerator FailEffect()
+    {
+        foreach (Renderer led in leds)
+        {
+            led.material = materialFail;
+            yield return new WaitForSeconds(0.1f);
+            led.sharedMaterial = materialOff;
+            currentEffect = StartCoroutine(PlaySequence());
         }
     }
 }
