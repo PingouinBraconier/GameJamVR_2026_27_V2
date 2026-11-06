@@ -8,6 +8,7 @@ public class HammerCollision : MonoBehaviour
     [Header("Sons")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip taupeHitSound;
+    [SerializeField] private AudioClip taupeHitSound2;
     [SerializeField] private AudioClip tableHitSound;
 
     [Header("Score")]
@@ -42,9 +43,17 @@ public class HammerCollision : MonoBehaviour
                 }
             }
 
-            if (audioSource != null && taupeHitSound != null)
+            if (audioSource != null)
             {
-                audioSource.PlayOneShot(taupeHitSound);
+                if (taupeHitSound != null)
+                {
+                    audioSource.PlayOneShot(taupeHitSound);
+                }
+
+                if (taupeHitSound2 != null)
+                {
+                    audioSource.PlayOneShot(taupeHitSound2);
+                }
             }
             target.DownOnHit();
 
