@@ -1,6 +1,7 @@
 using Unity.Mathematics;
 using UnityEditor.Rendering;
 using UnityEngine;
+using System.Collections;
 
 public class TargetUpAndDown : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class TargetUpAndDown : MonoBehaviour
             isUp = false;
             timer = -1;
             tempsEcoule = 0;
-            gameObject.transform.position = downPosition;
+            StartCoroutine(DescendreTaupe());
             taupeColider.enabled = false;
             multiplicatorUI.upMulti();
             sonSortieJoue = false;
@@ -135,5 +136,21 @@ public class TargetUpAndDown : MonoBehaviour
             }
         }
         
+    }
+
+    IEnumerator DescendreTaupe()
+    {
+        for (int i = 1; i <= 4; i++)
+        {
+            float progression = i / 4f;
+
+            transform.position = Vector3.Lerp(
+                upPosition,
+                downPosition,
+                progression
+            );
+
+            yield return new WaitForSeconds(0.025f);  
+        }
     }
 }
