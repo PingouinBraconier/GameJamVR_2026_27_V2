@@ -19,18 +19,21 @@ public class MultiplicatorUI : MonoBehaviour
         downPosition = gameObject.transform.position;
         upPosition = downPosition + new Vector3(0f, 0.2f, 0f);
         dureeMax = 1;
-        DureeIncrased();
+        StartCoroutine (DureeIncrased());
+
     }
     IEnumerator DureeIncrased()
     {
-        yield return new WaitForSeconds(0.1f);
-        tempsEcoule += 0.1f;
-        duree = tempsEcoule / dureeMax;
-        multi.transform.position = Vector3.Lerp(downPosition, upPosition, duree);
-        if (duree > 1)
+        while (true)
         {
-            yield return new WaitForSeconds(1f);
-            multi.alpha = 0f;
+            yield return new WaitForSeconds(0.001f);
+            tempsEcoule += 0.01f;
+            duree = tempsEcoule / dureeMax;
+            multi.transform.position = Vector3.Lerp(downPosition, upPosition, duree);
+            if (duree > 1)
+            {
+                multi.alpha = 0f;
+            }
         }
     }
 
@@ -39,6 +42,7 @@ public class MultiplicatorUI : MonoBehaviour
     {
         duree = 0;
         multi.alpha = 1f;
-        multi.text = scoreMultiple.multyplicator + "X";
+        multi.text = (scoreMultiple.multyplicator - 1) + "X";
+        tempsEcoule = 0;
     }
 }
